@@ -6,7 +6,7 @@
 /*   By: iscourr <i_courr@hotmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 10:43:35 by iscourr           #+#    #+#             */
-/*   Updated: 2024/02/06 13:44:43 by iscourr          ###   ########.fr       */
+/*   Updated: 2024/02/07 14:50:47 by iscourr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_putstr(char *s);
 int	ft_putchar(char c);
 int	ft_putnbr(int n);
 int	ft_putnbr_unsigned(unsigned int n);
-int	ft_puthexa(unsigned int n);
-int	ft_puthexl(unsigned int n);
+int	ft_puthexa(unsigned long n);
+int	ft_puthexl(unsigned long n);
 
 #endif

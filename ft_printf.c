@@ -6,7 +6,7 @@
 /*   By: iscourr <i_courr@hotmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 10:44:47 by iscourr           #+#    #+#             */
-/*   Updated: 2024/02/06 13:45:38 by iscourr          ###   ########.fr       */
+/*   Updated: 2024/02/07 14:47:25 by iscourr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ static	int	ft_input_cecker(const char **format, va_list args)
 		j += ft_puthexa(va_arg(args, unsigned int));
 	else if (**format == 'X')
 		j += ft_puthexl(va_arg(args, unsigned int));
+	else if (**format == 'p')
+	{
+		j += ft_putstr("0x");
+		j += ft_puthexa((unsigned long) va_arg(args, void *));
+	}
 	else
 		j += ft_putchar(**format);
 	return (j);
