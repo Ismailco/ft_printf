@@ -6,7 +6,7 @@
 /*   By: iscourr <i_courr@hotmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 10:44:47 by iscourr           #+#    #+#             */
-/*   Updated: 2024/02/09 10:37:42 by iscourr          ###   ########.fr       */
+/*   Updated: 2024/02/10 10:12:22 by iscourr          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ static	int	ft_input_cecker(const char **format, va_list args)
 {
 	int		j;
 
-	if (write(1, 0, 0) == -1)
-		return (-1);
 	j = 0;
 	(void)(*(*format)++);
+	if (write(1, 0, 0) == -1)
+		return (-1);
 	if (**format == 'c')
 		j += ft_putchar(va_arg(args, int));
 	else if (**format == 's')
