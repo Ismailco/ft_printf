@@ -18,8 +18,6 @@ static	int	ft_input_cecker(const char **format, va_list args)
 
 	j = 0;
 	(void)(*(*format)++);
-	if (write(1, 0, 0) == -1)
-		return (-1);
 	if (**format == 'c')
 		j += ft_putchar(va_arg(args, int));
 	else if (**format == 's')
